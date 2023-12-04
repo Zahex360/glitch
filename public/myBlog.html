@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Blog</title>
+    <meta
+      name="description"
+      content="Welcome to Zahid Alabadllah's personal blog, where he shares thoughts, experiences, and hobbies."
+    />
+    <meta
+      name="keywords"
+      content="Zahid Alabadllah, personal blog, thoughts, experiences, hobbies"
+    />
+    <meta name="author" content="Zahid Alabadllah" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="list.js" defer></script>
+    <script src="keyboard_nav.js" defer></script>
+    <script src="API.js" defer></script>
+    <script src="3D.js"></script>
+    <script src="object_class.js"></script>
+
+    <link rel="stylesheet" href="css3ex1.css" />
+    <link rel="stylesheet" href="both.css" />
+    <link rel="stylesheet" href="loader.css" />
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 770px)" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="screensaver.css">
+  </head>
+  <body>
+
+    <div class="loader" style="width: 100%; height: 100%"></div>
+    <div id="screensaver-container" style="height: 100%; width: 100%"></div>
+
+    
+
+    <header>
+          <nav class="Zahid">Zahid Alabadllah</nav>
+          <nav class="navbar">
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-list">
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="hire_me.html">Hire me</a></li>
+              <li><a href="minigames.html">Mini-games</a></li>
+              <li><a href="myblog-ar.html">AR🌐</a></li>
+            </ul>
+          </nav>
+        </div>
+      <div class="Title">THE BLOG</div>
+    </header>
+
+    <div id="help-popup" class="popup">
+      <p>Keyboard Navigation:</p>
+      <ul>
+        <li>Press <em>Tab</em> to navigate through links.</li>
+        <li>Press <em>Enter</em> or "Space" to activate links.</li>
+        <li>Press <em>↑</em> and <em>↓</em> to navigate up and down</li>
+      </ul>
+    </div>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="sidebar">
+            <div class="postcard">
+              <figure>
+                <img
+                  src="images/Zahid.png"
+                  alt="Zahid's Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <div class="head_body">
+                <div class="title-date-container">
+                  <h2>Welcome to My Blog</h2>
+                  <p class="date">August 27, 2023</p>
+                </div>
+                <p class="par">
+                  This is where I share my
+                  <em>thoughts, experiences, and adventures</em>. Join me on
+                  this journey as we <em>explore a world</em> of ideas and
+                  stories.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8" id="container">
+          <!--<article>
+            <div class="postcard">
+              <figure>
+                <img src="images/AI.jpg" alt="AI Image" class="img-fluid" />
+              </figure>
+              <div class="head_body">
+                <div class="title-date-container">
+                  <h2>
+                    The Future of Artificial Intelligence: Trends to Watch in
+                    2023 and Beyond
+                  </h2>
+                  <p class="date">August 28, 2023</p>
+                </div>
+                <p class="par">
+                  <em>Artificial Intelligence (AI)</em> is rapidly evolving,
+                  shaping the future of computer science. In 2023 and beyond,
+                  key trends include heightened ethical considerations, AI's
+                  transformative impact in healthcare, advancements in Natural
+                  Language Processing (NLP) with GPT-4, progress in autonomous
+                  vehicles, the synergy between AI and quantum computing, AI's
+                  role in addressing climate change, and its transformation of
+                  the financial sector. Staying updated on these dynamic trends
+                  is vital for computer science professionals and enthusiasts.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="postcard">
+              <figure>
+                <img
+                  src="images/cyber.jpg"
+                  alt="Cybersecurity Image"
+                  class="img-fluid"
+                />
+              </figure>
+              <div class="head_body">
+                <div class="title-date-container">
+                  <h2>
+                    The Importance of Cybersecurity Education: Protecting the
+                    Digital World
+                  </h2>
+                  <p class="date">August 29, 2023</p>
+                </div>
+                <p class="par">
+                  In our increasingly digital world,
+                  <em>cybersecurity</em> education is paramount. This post
+                  underscores the urgency due to rising cyber threats like
+                  ransomware and data breaches, the widening skills gap in
+                  cybersecurity, and the pivotal role of education at all
+                  levels. It provides practical advice for individuals on cyber
+                  hygiene and highlights diverse career opportunities in
+                  cybersecurity. Furthermore, it explores emerging trends and
+                  government-industry initiatives while emphasizing the
+                  collective responsibility to protect our digital realm.
+                </p>
+              </div>
+            </div>
+          </article> -->
+          <!-- <article>
+            <div class="postcard">
+                <figure>
+                    <img class="article-image"/><img src="" alt="">
+                </figure>
+                <div class="head_body">
+                    <div class="title-date-container">
+                        <h2 class="article-title"></h2>
+                        <p class="article-date"></p>
+                    </div>
+                    <p class="article-content"></p>
+                </div>
+        </div>
+        </article> -->
+        
+        </div>
+      </div>
+    </section>
+    <div id="screensaver-container"></div>
+
+
+    <footer>
+      <div class="here">
+        <nav class="menu">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="hire_me.html">Hire Me</a></li>
+            <li><a href="myblog-ar.html">غير للعربية 🌐</a></li>
+          </ul>
+        </nav>
+        <p class="right">
+          &copy; 2023 <br />Zahid Alabadllah. <br />All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader--hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
+
+  </body>
+</html>
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="desktop.css" media="(min-width: 770px)" />
+    <script src="tic-tac.js" defer></script>
+    <script src="3D.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="screensaver.css" />
+
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .cell {
+        font-family: sans-serif;
+        font-size: larger;
+        font-weight: bolder;
+        background-color: beige;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cell:hover {
+        background-color: blanchedalmond;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .active-cell {
+        background-color: lightblue !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="screensaver-container" style="height: 100%; width: 100%"></div>
+
+    <h1>
+      <span id="win_draw">Now it's <span id="turn">X</span> turn</span>
+    </h1>
+
+    <!-- Board -->
+    <div class="board">
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <button id="reset-button" onclick="resetGame()">Reset Game</button>
+      <a href="myBlog.html">Back to home</a>
+
+      <script>
+        // decided which turn is it
+        let turn = "X";
+        let gameEnded = false;
+
+        // Winning combinations
+        const winningCombos = [
+          [0, 1, 2],
+          [3, 4, 5],
+          [6, 7, 8], // Rows
+          [0, 3, 6],
+          [1, 4, 7],
+          [2, 5, 8], // Columns
+          [0, 4, 8],
+          [2, 4, 6], // Diagonals
+        ];
+
+        // Store cell values
+        const cells = document.querySelectorAll(".cell");
+        const cellValues = ["", "", "", "", "", "", "", "", ""];
+
+        function checkWinner() {
+          for (const combo of winningCombos) {
+            const [a, b, c] = combo;
+            if (
+              cellValues[a] &&
+              cellValues[a] === cellValues[b] &&
+              cellValues[a] === cellValues[c]
+            ) {
+              return cellValues[a];
+            }
+          }
+          return null;
+        }
+
+        // when we click on a cell add the letter
+        let board = document.getElementsByClassName("board")[0];
+        board.addEventListener("click", cellClicked);
+
+        function cellClicked(event) {
+          let cell = event.target;
+          if (cell.innerText == "" && !gameEnded) {
+            cell.innerText = turn;
+            cell.style.background = "gray";
+
+            // Store the cell value
+            const cellIndex = Array.from(cells).indexOf(cell);
+            cellValues[cellIndex] = turn;
+
+            // Check for a winner
+            const winner = checkWinner();
+            if (winner) {
+              gameEnded = true;
+              document.querySelector("#win_draw").innerText = `${winner} wins!`;
+            } else if (cellValues.every((value) => value !== "")) {
+              gameEnded = true;
+              document.querySelector("#win_draw").innerText = "Draw!";
+            } else {
+              // No winner, change turn
+              turn = turn === "X" ? "O" : "X";
+
+              //change title
+              turnLetter = document.querySelector("#turn");
+              turnLetter.innerText = turn;
+            }
+          }
+        }
+
+        function resetGame() {
+          // Reset cell values
+          cellValues.fill("");
+
+          // Clear cell text and background
+          cells.forEach((cell) => {
+            cell.innerText = "";
+            cell.style.background = "beige";
+          });
+
+          // Reset turn and game status
+          turn = "X";
+          gameEnded = false;
+          document.querySelector("#win_draw").innerHTML =
+            "Now it's <span id='turn'></span> turn";
+          document.querySelector("#turn").innerText = turn;
+          cells[activeCell].classList.remove("active-cell");
+          cells[0].classList.add("active-cell");
+          activeCell = 0;
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+body{
+    background-color:  rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+header{
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 1rem 0;
+
+}
+
+/* Change all header cells of the table to uppercase */
+table th {
+    text-transform: uppercase;
+  }
+  
+  /* Change all links to green color */
+  a {
+    color: green;
+  }
+  
+  /* Give top value cells a class of "top"  and
+  Change the background color of cells with class "top" to red gold */
+  .top {
+    background-color: #EB5406;
+    font-weight: bold;
+  }
+  
+
+  
+  /* Add <em> elements to 2 words/phrases that I want to emphasize in paragraphs */
+    /* Change the background of <em> elements to blue */
+
+  em{
+    font-style: italic;
+    background-color: blue;
+
+  }
+
+  /* Change all h2 fonts family to sans-serif */
+h2 {
+    font-family: sans-serif;
+  }
+  
+  /* Capitalize all headings of any level */
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+  }
+  
+  /* Change the first paragraph's letter after any h2 to x-large */
+  h2 + p::first-letter {
+    font-size: x-large;
+  }
+  
+  /* When someone hovers over any table rows, change the background color */
+   tr:hover {
+    background-color: rgb(255, 0, 255); 
+  }
+  
+  /* If the cell has a previous color, change it also */
+    tr:hover td {
+    background-color: inherit;
+  }
+  
+  /* Add a navigation bar to my web page */
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  /* Change the list items display of the navbar to inline */
+  
+  nav li {
+    display: inline;
+    margin: 30px;
+  }
+  
+  /* Change the link of the first nav item to underlined and others without */
+  nav li:first-child a {
+    text-decoration: underline;
+  }
+  
+  nav li:not(:first-child) a {
+    text-decoration: none;
+  }
+  
+  /* Use nth-child to make all table's body rows background colors alternating */
+   tr:nth-child(even) {
+    background-color: #88958a; 
+  }
+  
+  /* When someone highlights text, change the highlighting color */
+  ::selection {
+    background-color: #ffcc00; 
+  }
+  
+  /* When someone hovers over my webpage body links (not nav), change the cursor to a pointer */
+  a:hover {
+    cursor: pointer;
+  }
+  
+  /* Change all input fields' height to 20px */
+  input,textarea {
+    height: 20px;
+  }
+  
+  /* Change the border color of all inputs of type text to light gray */
+  input,textarea {
+    border-color: lightgray;
+  }
+  
+  /* Change input of name message height to 50px */
+  input[name="message"] {
+    height: 50px;
+  }
+  

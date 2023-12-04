@@ -1,0 +1,42 @@
+#help-popup {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  max-width: 500px;
+  text-align: center;
+  animation: vanish 10s linear;
+  color: #333;
+}
+
+#help-popup p,
+#help-popup ul {
+  margin: 0;
+  padding: 0;
+}
+
+#help-popup ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#help-popup ul li {
+  margin: 5px 0;
+}
+
+/* Keyframes for fading out the popup */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none; /* Hide the popup when the animation is complete */
+  }
+}

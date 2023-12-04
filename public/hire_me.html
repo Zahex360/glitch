@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire Me - Zahid Alabadllah</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+      #signatureCanvas {
+        border: 1px solid #000;
+      }
+
+      #clearSignature {
+        font-size: 10px;
+      }
+    </style>
+
+    <script src="keyboard_nav.js" defer></script>
+    <script src="3D.js"></script>
+    <script src="2D.js" defer></script>
+
+    <link rel="stylesheet" href="hire_me.css" />
+    <link rel="stylesheet" href="css3ex1.css" />
+    <link rel="stylesheet" href="both.css" />
+    <link rel="stylesheet" href="desktop.css" />
+    <link rel="stylesheet" href="screensaver.css" />
+  </head>
+  <body>
+    <div id="screensaver-container" style="height: 100%; width: 100%"></div>
+
+    <header>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Zahid Alabadllah</a>
+      </nav>
+      <div class="Title" style="margin: 20px">Hire me</div>
+    </header>
+    <section class="container">
+      <div class="cont">
+        <label>
+          Here you can hire me to complete a project for you. <br />
+          Please fill the form below:
+        </label>
+
+        <form action="thank_you.html" class="mt-4">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              required
+              placeholder="Ali Qhahtani"
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              required
+              placeholder="Example: AliQhahtani@example.com"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Your phone number:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="phone"
+              required
+              placeholder="Exapmle: +966550000000 "
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="project-type">Type of Project:</label>
+            <input
+              type="text"
+              class="form-control"
+              list="project-type"
+              name="project-type"
+              required
+            />
+            <datalist id="project-type">
+              <option>Web Design</option>
+              <option>App Development</option>
+              <option>Graphic Design</option>
+              <option>Other</option>
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="contact">Preferred Contact Method:</label>
+            <input
+              type="text"
+              class="form-control"
+              list="preferred-contact"
+              name="contact"
+              required
+            />
+            <datalist id="preferred-contact">
+              <option value="Email"></option>
+              <option value="Phone"></option>
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="project-description">Project Description:</label>
+            <textarea
+              name="project-description"
+              class="form-control"
+              rows="4"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="budget">Estimated Budget:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="budget"
+              placeholder="e.g., 5000 SR"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="signature">Your Signature:</label>
+            <canvas id="signatureCanvas" width="400" height="150"></canvas>
+            <button type="button" id="clearSignature">Clear</button>
+            <input type="hidden" name="signature" id="signatureInput" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="here">
+        <nav class="menu">
+          <ul>
+            <li><a href="myBlog.html">Back to home</a></li>
+          </ul>
+        </nav>
+        <p class="right">
+          &copy; 2023 <br />Zahid Alabadllah. <br />All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script>
+      //Salam, Since these function were not a good fit to my website idea, I applied them here in this extra idea.
+      //This code demonstrates the use of map, reduce, and filter functions for managing and analyzing a list
+      //of projects with various types and budgets. It filters high-budget projects, calculates the average
+      //budget, and creates a new list of project descriptions.
+
+      function manageProjects() {
+        // Sample list of projects
+        const projects = [
+          {
+            type: "Web Design",
+            budget: 5000,
+            description: "Design a new website",
+          },
+          {
+            type: "App Development",
+            budget: 8000,
+            description: "Develop a mobile app",
+          },
+          {
+            type: "Graphic Design",
+            budget: 3000,
+            description: "Create marketing materials",
+          },
+          {
+            type: "Web Design",
+            budget: 6000,
+            description: "Redesign existing website",
+          },
+          {
+            type: "App Development",
+            budget: 9000,
+            description: "Build a custom app",
+          },
+        ];
+
+        // Filter projects with a budget above 6000
+        const highBudgetProjects = projects.filter(
+          (project) => project.budget > 6000
+        );
+
+        // Calculate the average budget for all projects
+        const totalBudget = projects.reduce(
+          (sum, project) => sum + project.budget,
+          0
+        );
+        const averageBudget = totalBudget / projects.length;
+
+        // Create a new list of project descriptions
+        const projectDescriptions = projects.map(
+          (project) => project.description
+        );
+
+        console.log("High Budget Projects:", highBudgetProjects);
+        console.log("Average Budget:", averageBudget);
+        console.log("Project Descriptions:", projectDescriptions);
+      }
+
+      // Call the manageProjects function when the page loads
+      window.addEventListener("load", manageProjects);
+    </script>
+  </body>
+</html>

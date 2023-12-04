@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+.Zahid {
+  color: #fff;
+}
+
+.hamburger {
+  color: #fff;
+}
+
+.Title {
+  border-top: 1px solid rgba(0, 0, 0, 0.34);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+}
+
+header {
+  background-color: #2d85c1;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-list {
+  display: none;
+  padding: 0;
+  margin-left: 20px;
+}
+.nav-list li a:hover {
+  color: #ff5733;
+}
+
+.nav-list li {
+  margin-right: 30px;
+}
+
+.navbar:hover .nav-list {
+  display: block;
+}
+
+.nav-list li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.nav-list li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.nav-list li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.nav-list li a {
+  color: #fff;
+}
+
+.cont {
+  margin: 20px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postcard {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.postcard img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-details {
+  padding: 20px;
+}
+
+.contact-details .cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  font-size: 16px;
+}
+
+form button {
+  font-size: 18px;
+  padding: 15px 30px;
+}

@@ -1,0 +1,295 @@
+/* Change all header cells of the table to uppercase */
+table th {
+  text-transform: uppercase;
+}
+
+/* Give top value cells a class of "top"  and
+  Change the background color of cells with class "top" to red gold */
+.top {
+  background-color: #eb5406;
+  font-weight: bold;
+}
+
+/* Add <em> elements to 2 words/phrases that I want to emphasize in paragraphs */
+/* Change the background of <em> elements to blue */
+
+em {
+  font-style: italic;
+  background-color: rgb(135, 215, 220);
+}
+
+/* Change all h2 fonts family to sans-serif */
+h2 {
+  font-family: sans-serif;
+}
+
+/* Capitalize all headings of any level */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+/* Change the first paragraph's letter after any h2 to x-large */
+h2 + p::first-letter {
+  font-size: x-large;
+}
+
+/* When someone hovers over any table rows, change the background color */
+tr:hover {
+  background-color: rgb(186, 253, 255);
+}
+
+/* If the cell has a previous color, change it also */
+tr:hover td {
+  background-color: inherit;
+}
+
+/* Change the list items display of the navbar to inline */
+
+nav li {
+  display: inline;
+}
+
+/* Change the link of the first nav item to underlined and others without */
+.menu li:first-child a {
+  text-decoration: underline;
+}
+
+.menu li:not(:first-child) a {
+  text-decoration: none;
+}
+
+/* Use nth-child to make all table's body rows background colors alternating */
+tr:nth-child(even) {
+  background-color: #88958a;
+}
+
+/* When someone highlights text, change the highlighting color */
+::selection {
+  background-color: #ffcc00;
+}
+
+/* When someone hovers over my webpage body links (not nav), change the cursor to a pointer */
+a:hover {
+  cursor: pointer;
+}
+
+/* Change all input fields' height to 20px */
+input,
+textarea {
+  height: 20px;
+}
+
+/* Change the border color of all inputs of type text to light gray */
+input,
+textarea {
+  border-color: lightgray;
+}
+
+/* Change input of name message height to 50px */
+input[name="message"] {
+  height: 50px;
+}
+
+/* styles.css */
+button {
+  background-color: #3498db; /* Initial background color */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+  background-color: #e74c3c; /* New background color on hover */
+}
+/* Reset default margin and padding */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the navbar */
+.navbar {
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  display: flex;
+  top: -35px;
+}
+
+/* Style the hamburger icon */
+.hamburger {
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: -4px;
+}
+
+/* Hide the navigation list by default */
+.nav-list {
+  display: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
+/* Style the individual menu items */
+.nav-list li {
+  margin-right: 30px;
+}
+
+/* Style the links */
+.nav-list li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Show the navigation list when hovering over the hamburger icon */
+.navbar:hover .nav-list {
+  display: block;
+}
+
+/* Add a delay effect for individual menu items */
+.nav-list li:nth-child(1) {
+  transition-delay: 0.2s; /* Delay for the first item */
+}
+
+.nav-list li:nth-child(2) {
+  transition-delay: 0.4s; /* Delay for the second item */
+}
+
+.nav-list li:nth-child(3) {
+  transition-delay: 0.6s; /* Delay for the third item */
+}
+
+.English .sidebar {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 250px;
+  background-color: #f0f0f0;
+}
+
+.arabic .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 250px;
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .arabic .sidebar,
+  .English .sidebar {
+    position: relative; /* Reset position to be relative */
+    width: 100%; /* Make it full width on mobile screens */
+    margin-top: 20px; /* Add spacing between postcards */
+  }
+}
+section {
+  width: fit-content;
+  height: fit-content;
+}
+
+.postcard figure {
+  position: relative;
+}
+
+.nav-list li a:hover {
+  color: #ff5733;
+}
+
+.postcard figure::before {
+  content: "ZAHID";
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+  font-size: 20px;
+  color: rgba(95, 88, 88, 0.3);
+}
+
+.postcard .head_body {
+  position: relative;
+}
+
+.head_body .title-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  margin-left: 20px;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Mobile-friendly styles for smaller screens */
+@media (max-width: 768px) {
+  .cont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .postcard {
+    width: 100%; /* Make postcards full width */
+    margin-bottom: 20px; /* Add spacing between postcards */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    left: -10;
+    margin: 0;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .nav-list li a:hover {
+    color: #ff5733;
+  }
+
+  .popup #help-popup {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+/* Reset some default styles */
+
+/* Container styles */
+
+/* Contact item styles */
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item img {
+  margin-top: 30px;
+}
+
+.contact-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Form styles */
+form label {
+  font-size: 25px;
+  width: 390px;
+}
+
+form input[type="text"] {
+  width: 300px;
+  height: 100px;
+  font-size: 16px;
+}
+
+/* Button styles */
+button {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* List styles */
+ul {
+  margin-top: 60px;
+}
